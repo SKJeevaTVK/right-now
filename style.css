@@ -1,1 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+    transition: 0.5s ease;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+#message {
+    font-size: 18px;
+    margin-bottom: 35px;
+    opacity: 0.8;
+}
+
+.moods {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.moods button {
+    padding: 25px 15px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.moods button span {
+    display: block;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.moods button:hover {
+    transform: translateY(-6px) scale(1.03);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.moods button:active {
+    transform: scale(0.95);
+}
+
+/* Happy */
+
+body.happy {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #222;
+}
+
+/* Sad */
+
+body.sad {
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+/* Angry */
+
+body.angry {
+    background: linear-gradient(135deg, #cb2d3e, #ef473a);
+}
+
+/* Tired */
+
+body.tired {
+    background: linear-gradient(135deg, #232526, #414345);
+}
+
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .moods {
+        gap: 12px;
+    }
+
+    .moods button {
+        padding: 20px 10px;
+    }
+}
