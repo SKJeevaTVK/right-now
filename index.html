@@ -11,37 +11,145 @@
 
 <body>
 
+    <!-- Background Effects -->
+    <div id="effects"></div>
+
+    <!-- Top Bar -->
+    <header class="top-bar">
+        <div class="logo">RIGHT NOW</div>
+
+        <div class="top-actions">
+            <span id="time">00:00:00</span>
+
+            <button id="themeBtn" onclick="toggleTheme()">
+                🌙
+            </button>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
     <main class="container">
 
-        <h1>How are you feeling right now?</h1>
+        <section class="card">
 
-        <p id="message">Choose your mood</p>
+            <p class="small-title">CHECK IN</p>
 
-        <div class="moods">
+            <h1>How are you feeling<br>right now?</h1>
 
-            <button onclick="changeMood('happy')">
-                😊
-                <span>Happy</span>
-            </button>
+            <p id="message" class="subtitle">
+                Choose your mood
+            </p>
 
-            <button onclick="changeMood('sad')">
-                😢
-                <span>Sad</span>
-            </button>
 
-            <button onclick="changeMood('angry')">
-                😡
-                <span>Angry</span>
-            </button>
+            <!-- Mood Buttons -->
+            <div class="moods">
 
-            <button onclick="changeMood('tired')">
-                😴
-                <span>Tired</span>
-            </button>
+                <button class="mood-btn happy"
+                        onclick="changeMood('happy')">
 
-        </div>
+                    <span class="emoji">😊</span>
+                    <span>Happy</span>
+
+                </button>
+
+
+                <button class="mood-btn sad"
+                        onclick="changeMood('sad')">
+
+                    <span class="emoji">😢</span>
+                    <span>Sad</span>
+
+                </button>
+
+
+                <button class="mood-btn angry"
+                        onclick="changeMood('angry')">
+
+                    <span class="emoji">😡</span>
+                    <span>Angry</span>
+
+                </button>
+
+
+                <button class="mood-btn tired"
+                        onclick="changeMood('tired')">
+
+                    <span class="emoji">😴</span>
+                    <span>Tired</span>
+
+                </button>
+
+            </div>
+
+
+            <!-- Result -->
+            <div id="result" class="result hidden">
+
+                <div id="selectedEmoji" class="selected-emoji">
+                    😊
+                </div>
+
+                <h2 id="moodName">
+                    Happy
+                </h2>
+
+                <p id="moodMessage">
+                    Enjoy this moment.
+                </p>
+
+
+                <!-- Mood Meter -->
+                <div class="meter-area">
+
+                    <div class="meter-top">
+                        <span>Mood level</span>
+                        <strong id="moodPercent">75%</strong>
+                    </div>
+
+                    <div class="meter">
+                        <div id="meterFill"></div>
+                    </div>
+
+                </div>
+
+
+                <!-- Random Thought -->
+                <div class="thought">
+
+                    <span>💭</span>
+
+                    <p id="thoughtText">
+                        Today is a good day to smile.
+                    </p>
+
+                </div>
+
+
+                <!-- Buttons -->
+                <div class="actions">
+
+                    <button onclick="shareMood()" class="share-btn">
+                        📤 Share My Mood
+                    </button>
+
+                    <button onclick="resetMood()" class="reset-btn">
+                        🔄 Choose Again
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
 
     </main>
+
+
+    <footer>
+        Made with HTML • CSS • JavaScript
+    </footer>
+
 
     <script src="script.js"></script>
 
