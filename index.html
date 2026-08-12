@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Right Now</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>How are you feeling right now?</h1>
+
+        <p id="message">Choose your mood</p>
+
+        <div class="moods">
+
+            <button onclick="changeMood('happy')">
+                😊
+                <span>Happy</span>
+            </button>
+
+            <button onclick="changeMood('sad')">
+                😢
+                <span>Sad</span>
+            </button>
+
+            <button onclick="changeMood('angry')">
+                😡
+                <span>Angry</span>
+            </button>
+
+            <button onclick="changeMood('tired')">
+                😴
+                <span>Tired</span>
+            </button>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
